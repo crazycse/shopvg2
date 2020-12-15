@@ -1,0 +1,14 @@
+.header {
+  overflow: hidden;
+  background-color: #dbe4f8;
+  padding: 20px 10px;
+}
+.header a {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  border: black;
+}

@@ -1,0 +1,40 @@
+<div>
+	<a routerLink="/add/add" class="float-right">
+		<span class="material-icons icon" size="2x">
+      add
+    </span>
+	</a>
+	<div style="overflow-x:auto;">
+		<table class="table">
+			<tr>
+				<th>Id</th>
+				<th>Category</th>
+				<th>Name</th>
+				<th>Total kg</th>
+				<th>Price/kg</th>
+				<th>Total Price</th>
+				<th>Exp Date</th>
+				<th> Command</th>
+			</tr>
+			<tr *ngFor="let item of data; let id = index">
+				<td>{{id+1}}</td>
+				<td>
+					{{item.Category}}
+				</td>
+				<td>{{item.Name}}</td>
+				<td>{{item.Total_kg}}</td>
+				<td>{{item.Price_kg}}</td>
+				<td>{{item.Total_price}}</td>
+				<td>{{item.Exp_date}}</td>
+				<td><button [routerLink]='["/add",id]'><span class="material-icons">
+              edit
+            </span></button>
+					<button (click)="remove(id)"><span class="material-icons">
+              delete
+            </span></button>
+				</td>
+
+			</tr>
+		</table>
+	</div>
+</div>
